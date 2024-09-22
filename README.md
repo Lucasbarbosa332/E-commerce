@@ -32,6 +32,9 @@ As tabelas e bancos de Dados estão dentro do arquivi zip
  
 * Perfil do Cliente: Visualização e edição das informações do perfil do cliente.
 * Histórico de Compras: Exibição das compras anteriores, permitindo reordenação de produtos.
+
+<img width=50% src="https://github.com/Lucasbarbosa332/E-commerce/blob/main/Captura%20de%20tela%202024-09-22%20172331.png?raw=true"></img>
+ 
 * Avaliações de Produtos: Permitir que os clientes deixem avaliações e comentários sobre os produtos comprados.
 
 # Seção de Vendas
