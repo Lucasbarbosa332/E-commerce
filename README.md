@@ -45,6 +45,8 @@ As tabelas e bancos de Dados estão dentro do arquivi zip
 
 # Seção de Usuários (Admin)
 
+<img width=50% src="https://github.com/Lucasbarbosa332/E-commerce/blob/main/Captura%20de%20tela%202024-09-22%20172342.png?raw=true"></img>
+
 * Gerenciamento de Usuários: Visualização, edição e exclusão de contas de usuários.
 * Controle de Produtos: Adição, edição e remoção de produtos no sistema.
 * Relatórios de Vendas: Geração de relatórios sobre vendas e desempenho do e-commerce
