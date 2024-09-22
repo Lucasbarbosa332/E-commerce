@@ -20,7 +20,7 @@ As tabelas e bancos de Dados estão dentro do arquivi zip
 
 # Seção de Produtos
 
- <img width=50% src=""></img>
+ <img width=50% src="https://github.com/Lucasbarbosa332/E-commerce/blob/main/Captura%20de%20tela%202024-09-22%20172228.png?raw=true"></img>
 
 * Listagem de Produtos: Exibição de todos os produtos disponíveis com imagens, descrições e preços.
 * Filtragem e Pesquisa: Permite aos usuários buscar produtos por categoria, preço ou palavras-chave.
@@ -28,6 +28,8 @@ As tabelas e bancos de Dados estão dentro do arquivi zip
 
 # Seção de Clientes
 
+ <img width=50% src=""></img>
+ 
 * Perfil do Cliente: Visualização e edição das informações do perfil do cliente.
 * Histórico de Compras: Exibição das compras anteriores, permitindo reordenação de produtos.
 * Avaliações de Produtos: Permitir que os clientes deixem avaliações e comentários sobre os produtos comprados.
