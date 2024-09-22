@@ -1,5 +1,10 @@
 # E-commerce
-Gestão de vendas 
+
+Gestão de vendas este projeto conta com varisas funcionaliades sendo elas a da lista abaixo 
+
+# Instalação 
+Voce precisa ter a versão java 11 ou superior para esse projeto voce precisa ter um IDE para executalo sendo eles VS CODE Ou NETBEANS 
+As tabelas e bancos de Dados estão dentro do arquivi zip 
 
 # Cadastro de Usuário
 
