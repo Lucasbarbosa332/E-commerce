@@ -16,7 +16,11 @@ As tabelas e bancos de Dados estão dentro do arquivi zip
 * Login/Senha: Autenticação de usuários com validação de senhas.
 * Recuperação de Senha: Opção para recuperação de senha via e-mail.
 
+ <img width=50% src="https://github.com/Lucasbarbosa332/E-commerce/blob/main/Captura%20de%20tela%202024-09-22%20172206.png?raw=true"></img>
+
 # Seção de Produtos
+
+ <img width=50% src=""></img>
 
 * Listagem de Produtos: Exibição de todos os produtos disponíveis com imagens, descrições e preços.
 * Filtragem e Pesquisa: Permite aos usuários buscar produtos por categoria, preço ou palavras-chave.
