@@ -28,7 +28,7 @@ As tabelas e bancos de Dados estão dentro do arquivi zip
 
 # Seção de Clientes
 
- <img width=50% src=""></img>
+ <img width=50% src="https://github.com/Lucasbarbosa332/E-commerce/blob/main/Captura%20de%20tela%202024-09-22%20172318.png?raw=true"></img>
  
 * Perfil do Cliente: Visualização e edição das informações do perfil do cliente.
 * Histórico de Compras: Exibição das compras anteriores, permitindo reordenação de produtos.
