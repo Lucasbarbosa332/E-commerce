@@ -52,10 +52,10 @@ As tabelas e bancos de Dados estão dentro do arquivi zip
 * Relatórios de Vendas: Geração de relatórios sobre vendas e desempenho do e-commerce
 
 
+# Estrutura do Banco de Dados
+
 Exemplo de Banco de Dados SQL
 Este repositório contém um exemplo de criação de tabelas para um sistema de ordens de serviço com usuários, clientes e ordens de serviço (OS).
-
-Estrutura do Banco de Dados
 
 ``` java 
 -- Criação da tabela tbusuarios para armazenar informações de usuários
