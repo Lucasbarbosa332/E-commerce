@@ -35,3 +35,5 @@ As tabelas e bancos de Dados estão dentro do arquivi zip
 * Gerenciamento de Usuários: Visualização, edição e exclusão de contas de usuários.
 * Controle de Produtos: Adição, edição e remoção de produtos no sistema.
 * Relatórios de Vendas: Geração de relatórios sobre vendas e desempenho do e-commerce
+
+# Banco de Dados 
