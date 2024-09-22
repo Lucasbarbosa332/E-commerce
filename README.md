@@ -2,7 +2,7 @@
 
 Gestão de vendas este projeto conta com varisas funcionaliades sendo elas a da lista abaixo 
 
-<img width=100% src="https://github.com/Lucasbarbosa332/E-commerce/blob/main/Captura%20de%20tela%202024-09-22%20172048.png?raw=true"></img>
+<img width=50% src="https://github.com/Lucasbarbosa332/E-commerce/blob/main/Captura%20de%20tela%202024-09-22%20172048.png?raw=true"></img>
 
 # Instalação 
 Voce precisa ter a versão java 11 ou superior para esse projeto voce precisa ter um IDE para executalo sendo eles VS CODE Ou NETBEANS 
@@ -10,7 +10,7 @@ As tabelas e bancos de Dados estão dentro do arquivi zip
 
 # Cadastro de Usuário
  
-  <img width=100% src=""></img>
+  <img width=50% src="https://github.com/Lucasbarbosa332/E-commerce/blob/main/Captura%20de%20tela%202024-09-22%20171942.png"></img>
 
 * Registro: Permite que novos usuários se cadastrem com informações como nome, e-mail e senha.
 * Login/Senha: Autenticação de usuários com validação de senhas.
