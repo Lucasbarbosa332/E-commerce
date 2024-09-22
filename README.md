@@ -58,41 +58,79 @@ Exemplo de Banco de Dados SQL
 Este repositório contém um exemplo de criação de tabelas para um sistema de ordens de serviço com usuários, clientes e ordens de serviço (OS).
 
 ``` java 
--- Criação da tabela tbusuarios para armazenar informações de usuários
-create table tbusuarios(
-  iduser int primary key,                  -- Identificador único para o usuário
-  usuario varchar(15) not null,            -- Nome do usuário, campo obrigatório
-  fone varchar(15),                        -- Telefone do usuário, campo opcional
-  login varchar(15) not null unique,       -- Nome de login, deve ser único
-  senha varchar(250) not null,             -- Senha do usuário (geralmente criptografada), campo obrigatório
-  perfil varchar(20) not null              -- Perfil do usuário (ex: 'admin', 'user'), campo obrigatório
-);
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
 
--- Inserção de um usuário administrador inicial na tabela tbusuarios
-insert into tbusuarios(iduser,usuario,login,senha,perfil) 
-values(1,'Administrador','admin',md5('admin'),'admin');
+public class DatabaseSetup {
+    private static final String URL = "jdbc:mysql://localhost:3306/seu_banco_de_dados";
+    private static final String USER = "seu_usuario";
+    private static final String PASSWORD = "sua_senha";
 
--- Criação da tabela tbclientes para armazenar informações de clientes
-create table tbclientes(
-  idcli int primary key auto_increment,    -- Identificador único do cliente, auto_increment para gerar automaticamente
-  nomecli varchar(50) not null,            -- Nome do cliente, campo obrigatório
-  endcli varchar(100),                     -- Endereço do cliente, campo opcional
-  fonecli varchar(15) not null,            -- Telefone do cliente, campo obrigatório
-  emailcli varchar(50) unique              -- Email do cliente, campo único
-);
+    public static void main(String[] args) {
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            createTables(connection);
+            insertAdminUser(connection);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
--- Criação da tabela tbos para armazenar informações sobre ordens de serviço (OS)
-create table tbos(
-  os int primary key auto_increment,       -- Identificador único da OS, auto_increment
-  data_os timestamp default current_timestamp, -- Data da OS com timestamp padrão no momento da criação
-  tipo varchar(15) not null,               -- Tipo de serviço (ex: 'manutenção', 'instalação'), campo obrigatório
-  situacao varchar(20) not null,           -- Situação da OS (ex: 'em andamento', 'concluída'), campo obrigatório
-  equipamento varchar(150) not null,       -- Descrição do equipamento, campo obrigatório
-  defeito varchar(150),                    -- Descrição do defeito (opcional)
-  servico varchar(150),                    -- Descrição do serviço realizado (opcional)
-  tecnico varchar(30),                     -- Nome do técnico responsável, opcional
-  valor decimal(10,2),                     -- Valor do serviço, opcional
-  idcli int not null,                      -- Chave estrangeira referenciando o cliente
-  foreign key(idcli) references tbclientes(idcli) -- Relaciona a OS ao cliente na tabela tbclientes
-);
+    private static void createTables(Connection connection) throws SQLException {
+        String createUsuariosTable = "CREATE TABLE tbusuarios (" +
+                "iduser INT PRIMARY KEY, " +
+                "usuario VARCHAR(15) NOT NULL, " +
+                "fone VARCHAR(15), " +
+                "login VARCHAR(15) NOT NULL UNIQUE, " +
+                "senha VARCHAR(250) NOT NULL, " +
+                "perfil VARCHAR(20) NOT NULL" +
+                ");";
+
+        String createClientesTable = "CREATE TABLE tbclientes (" +
+                "idcli INT PRIMARY KEY AUTO_INCREMENT, " +
+                "nomecli VARCHAR(50) NOT NULL, " +
+                "endcli VARCHAR(100), " +
+                "fonecli VARCHAR(15) NOT NULL, " +
+                "emailcli VARCHAR(50) UNIQUE" +
+                ");";
+
+        String createOsTable = "CREATE TABLE tbos (" +
+                "os INT PRIMARY KEY AUTO_INCREMENT, " +
+                "data_os TIMESTAMP DEFAULT CURRENT_TIMESTAMP, " +
+                "tipo VARCHAR(15) NOT NULL, " +
+                "situacao VARCHAR(20) NOT NULL, " +
+                "equipamento VARCHAR(150) NOT NULL, " +
+                "defeito VARCHAR(150), " +
+                "servico VARCHAR(150), " +
+                "tecnico VARCHAR(30), " +
+                "valor DECIMAL(10,2), " +
+                "idcli INT NOT NULL, " +
+                "FOREIGN KEY (idcli) REFERENCES tbclientes(idcli)" +
+                ");";
+
+        try (Statement statement = connection.createStatement()) {
+            statement.executeUpdate(createUsuariosTable);
+            statement.executeUpdate(createClientesTable);
+            statement.executeUpdate(createOsTable);
+            System.out.println("Tabelas criadas com sucesso!");
+        }
+    }
+
+    private static void insertAdminUser(Connection connection) throws SQLException {
+        String insertAdmin = "INSERT INTO tbusuarios (iduser, usuario, login, senha, perfil) VALUES (?, ?, ?, MD5(?), ?)";
+        
+        try (PreparedStatement preparedStatement = connection.prepareStatement(insertAdmin)) {
+            preparedStatement.setInt(1, 1);
+            preparedStatement.setString(2, "Administrador");
+            preparedStatement.setString(3, "admin");
+            preparedStatement.setString(4, "admin");
+            preparedStatement.setString(5, "admin");
+            preparedStatement.executeUpdate();
+            System.out.println("Usuário administrador inserido com sucesso!");
+        }
+    }
+}
+
 
