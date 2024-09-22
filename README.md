@@ -2,7 +2,7 @@
 
 Gestão de vendas este projeto conta com varisas funcionaliades sendo elas a da lista abaixo 
 
-<img width=100% src=""></img>
+<img width=100% src="https://github.com/Lucasbarbosa332/E-commerce/blob/main/Captura%20de%20tela%202024-09-22%20172048.png?raw=true"></img>
 
 # Instalação 
 Voce precisa ter a versão java 11 ou superior para esse projeto voce precisa ter um IDE para executalo sendo eles VS CODE Ou NETBEANS 
