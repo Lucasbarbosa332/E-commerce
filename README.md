@@ -55,7 +55,7 @@ As tabelas e bancos de Dados estão dentro do arquivi zip
 # Estrutura do Banco de Dados
 
 Exemplo de Banco de Dados SQL
-Este repositório contém um exemplo de criação de tabelas para um sistema de ordens de serviço com usuários, clientes e ordens de serviço (OS).
+Este repositório contém um exemplo de criação de tabelas para um sistema de cadastro de ID 
 
 ``` java 
 import java.sql.Connection;
